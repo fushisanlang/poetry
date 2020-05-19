@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes,text/html; charset=utf-8" />
+  <title>唐诗</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+  <style>
+@keyframes bgcolor {
+     0% { background-color: #c44040; }
+  100% { background-color: #c44040; }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    animation-delay: 0s;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-name: bgcolor;
+    background-color: #daebee;
+    color: #daebee;
+    font-family: "Segoe UI", "Microsoft Yahei UI";
+    height: 100%;
+    margin: 0px; ;
+}
+@font-face {
+    font-family: "Windows 8 Boot";
+    src: url("Win8Boot.woff");
+}
+.content {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+#animation {
+    font-family: "Windows 8 Boot";
+    font-size: 32pt;
+}
+#description {
+    margin-top: 18pt;
+    font-size: 18pt;
+}
+      div.address{width:100%;position:fixed;bottom:0;left:0;}
+
+</style>
+ </head>
+<body>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <div id="main" align="center">
+   <div align="center">
+    <table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+     <tbody>
+      <tr>
+       <td align="center"> {{title}} </td>
+      </tr>
+      <tr>
+       <td align="center"> {{author}} </td>
+      </tr> {% for paragraphs in paragraphsList %}
+      <tr>
+       <td align="center"> {{ paragraphs }} </td>
+      </tr> {% endfor %}
+     </tbody>
+    </table>
+   </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <address>
+    <div align="center">
+
+        <script>
+    function post(PARAMS)
+{
+    var temp = document.createElement("form");
+    temp.action = "/tangshi";
+    temp.method = "post";
+    temp.style.display = "none";
+var body = {
+           "id" : {{ id }},
+            "status" : PARAMS
+  };
+    for (var x in body)
+    {
+        var opt = document.createElement("textarea");
+        opt.name = x;
+        opt.value = body[x];
+        // alert(opt.name)
+        temp.appendChild(opt);
+    }
+    document.body.appendChild(temp);
+    temp.submit();
+    alert("提交成功");
+    return temp;
+
+}
+
+</script>
+
+<button onclick="post('shoucang')">收藏本首</button>
+<button onclick="location.reload();">再来一首</button>
+
+<button onclick="post('yichang')">反馈异常</button>
+     <table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+      <tbody>
+       <tr>
+        <td align="center"> 唐诗-{{id}} </td>
+       </tr>
+       <tr>
+        <td align="center"> <p><a href="http://www.beian.miit.gov.cn/" target="_blank">陕ICP备17017193号</a></p> </td>
+       </tr>
+      </tbody>
+     </table>
+   </div> </address>
+ </body>
+</html>

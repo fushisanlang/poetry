@@ -1,0 +1,81 @@
+
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes,text/html; charset=utf-8" />
+  <title>登陆</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+  <style>
+@keyframes bgcolor {
+     0% { background-color: #c44040; }
+  100% { background-color: #c44040; }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    animation-delay: 0s;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-name: bgcolor;
+    background-color: #daebee;
+    color: #daebee;
+    font-family: "Segoe UI", "Microsoft Yahei UI";
+    height: 100%;
+    margin: 0px; ;
+}
+@font-face {
+    font-family: "Windows 8 Boot";
+    src: url("Win8Boot.woff");
+}
+.content {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+#animation {
+    font-family: "Windows 8 Boot";
+    font-size: 32pt;
+}
+#description {
+    margin-top: 18pt;
+    font-size: 18pt;
+}
+      div.address{width:100%;position:fixed;bottom:0;left:0;}
+
+</style>
+ </head>
+
+ <body>
+  <br />
+  <br />
+  <br />
+  <br />
+  <h1 align="center" style="color:#283c63;">登陆</h1>
+  <br />
+  <br />
+  <div id="main" align="center">
+    <form action="{{ url_for('login') }}" method="POST">
+    <div align="center">
+     <table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+      <tbody>
+
+       <tr>
+        <td align="center"><p style="color:#daebee;font-size:16px;" align="center">用户名称：</p></td>
+           <td><input class="text" type="text" name="username" size="25" autocomplete="off"  /></td>  </tr> <tr> <td>    <br />  </td> </tr> <tr>
+                   <td align="center"><p style="color:#daebee;font-size:16px;" align="center">输入密码：</p></td>
+
+        <td><input class="text" type="password" name="userpass" size="25"  autocomplete="off"  /></td> </tr> <tr> <td>    <br />  </td> </tr>
+        <!-- placeholder="3 -5"  -->
+
+      </tbody>
+     </table>
+    </div>
+    <div align="center">
+     <input type="submit" ;="" align="center" value="登陆" />
+    </div>
+
+   </form>
+ </body>
+</html>
