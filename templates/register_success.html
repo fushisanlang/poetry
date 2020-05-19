@@ -2,8 +2,8 @@
 <html>
  <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes,text/html; charset=utf-8" />
-  <title>登陆异常</title>
-     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+  <title>注册成功</title>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
 
  </head>
@@ -13,9 +13,9 @@
   <br />
   <br />
   <br />
-  <h1 align="center" style="color:#283c63;">登陆异常</h1>
+  <h1 align="center" style="color:#283c63;">登陆</h1>
   <br />
-  <p style="color:#daebee;font-size:16px;" align="center">用户密码错误</p>
+  <p align="center">注册成功</p>
   <br />
   <div id="main" align="center">
     <form action="{{ url_for('login') }}" method="POST">
@@ -25,10 +25,10 @@
 
        <tr>
         <td align="center"><p style="color:#daebee;font-size:16px;" align="center">用户名称：</p></td>
-           <td><input class="text" type="text" name="username" size="25" autocomplete="off" pattern="^[1-9a-zA-Z]{3,20}$" /></td>  </tr> <tr> <td>    <br />  </td> </tr> <tr>
+           <td><input class="text" type="text" name="username" size="25" autocomplete="off" required="required" value="{{ username }}"//></td>  </tr> <tr> <td>    <br />  </td> </tr> <tr>
                    <td align="center"><p style="color:#daebee;font-size:16px;" align="center">输入密码：</p></td>
 
-        <td><input class="text" type="password" name="userpass" size="25"  autocomplete="off"  /></td> </tr> <tr> <td>    <br />  </td> </tr>
+        <td><input class="text" type="password" name="userpass" size="25"  autocomplete="off" required="required" value="{{ password }}"//></td> </tr> <tr> <td>    <br />  </td> </tr>
         <!-- placeholder="3 -5"  -->
 
       </tbody>
@@ -39,5 +39,7 @@
     </div>
 
    </form>
+      <button ><a href="/register" style="color:#283c63;">注册</a> </button>
+
  </body>
 </html>

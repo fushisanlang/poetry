@@ -1,0 +1,20 @@
+
+a {text-decoration:none}
+
+@keyframes bgcolor {
+     0% { background-color: #c44040; }
+  100% { background-color: #c44040; }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    animation-delay: 0s;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-name: bgcolor;
+    background-color: #daebee;
+    color: #daebee;
+    font-family: "Segoe UI", "Microsoft Yahei UI";
+    height: 100%;
+    margin: 0px; ;
+}
