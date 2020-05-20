@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes,text/html; charset=utf-8" />
+  <title>{{ZH_type}}</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+ </head>
+
+<body>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <div id="main" align="center">
+   <div align="center">
+    <table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+     <tbody>
+      <tr>
+       <td align="center"> {{title}} </td>
+      </tr>
+      <tr>
+       <td align="center"> {{author}} </td>
+      </tr> {% for paragraphs in paragraphsList %}
+      <tr>
+       <td align="center"> {{ paragraphs }} </td>
+      </tr> {% endfor %}
+     </tbody>
+    </table>
+   </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <address>
+    <div align="center">
+
+
+      <button ><a href="/" style="color:#283c63;">回主页</a> </button>
+
+     <table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+      <tbody>
+       <tr>
+        <td align="center"> {{ZH_type}}-{{id}} </td>
+       </tr>
+       <tr>
+        <td align="center"> <p><a href="http://www.beian.miit.gov.cn/" target="_blank">陕ICP备17017193号</a></p> </td>
+       </tr>
+      </tbody>
+     </table>
+   </div> </address>
+ </body>
+</html>

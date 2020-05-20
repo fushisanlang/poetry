@@ -105,7 +105,7 @@ def show_post(post_type,post_id):
     S_author = fanToJian(S_result[0][2].decode('UTF-8'))
     S_paragraphs = reStr(fanToJian(S_result[0][3].decode('UTF-8'))).split('\n')
     print(S_result)
-    return render_template('read.html',
+    return render_template('read_2.html',
                            id=S_id, title=S_title, author=S_author, paragraphsList=S_paragraphs,
                            EN_type=post_type,ZH_type=ZH_type)
 
