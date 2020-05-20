@@ -34,6 +34,6 @@ def deCodeList(lists):
         title = fanToJian(line[1].decode('UTF-8'))
         author = fanToJian(line[2].decode('UTF-8'))
         new_tuple = (id,title,author)
-
-        new_list.append(new_tuple)
+        new_dist = {"id":id,"title":title,"author":author}
+        new_list.append(new_dist)
     return new_list

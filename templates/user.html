@@ -38,15 +38,18 @@ td{text-align:center ;height: 1px}
      <table >
   <tbody>
   <tr class="head">
-      <td>id</td>
+
       <td>题目</td>
       <td>作者</td>
 
   </tr>
-{% for env in S_tangshi_result %}
+{% for result in S_tangshi_result %}
+
       <tr class={{ loop.cycle("s1","s2")}}>
-      {% for aaa in env %}
-     <td>{{ aaa }} </td> {% endfor %}
+
+     <td> <a href="/{{ type }}/{{ result.id }}">{{ result.title }}</a></td>
+<td>{{ result.author }}</td>
+
     </tr>
 {% endfor %}
    </tbody>

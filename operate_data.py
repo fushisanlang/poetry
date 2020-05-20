@@ -35,7 +35,7 @@ def insert_operaction(tablename,keys,valuses):
     sql_parm3 = " (" + keys +")"
     sql_parm4 = " VALUES (" + valuses + ");"
     sql = sql_parm1 + sql_parm2 + sql_parm3 + sql_parm4
-    print(sql)
+    #print(sql)
     cursor.execute(sql)
     conn.commit()
     cursor.close()
